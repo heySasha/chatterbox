@@ -1,0 +1,40 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    width: 100%;
+    padding-top: 5px;
+
+    &.selected {
+        background-color: #f8f8f8;
+    }
+
+    .picture {
+        width: 60px;
+        position: relative;
+        margin: 0 0 0 15px;
+
+        .circle {
+            border-radius: 50%;
+            background-color: #20d63e;
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            left: 48px;
+            top: 48px;
+
+            &.offline {
+                background-color: #d7dfe7;
+            }
+        }
+    }
+
+    .info {
+        .title {
+            font-weight: 600;
+        }
+
+        font-size: 13px;
+        width: 155px;
+    }
+}

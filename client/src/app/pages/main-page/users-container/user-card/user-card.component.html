@@ -1,0 +1,13 @@
+<ng-container *ngIf="user">
+    <div class="picture">
+        <img [src]="user.picture || 'assets/picture.png'" alt="" />
+        <div
+            [ngClass]="{ offline: user.status !== 'online' }"
+            class="circle"
+        ></div>
+    </div>
+    <div class="info">
+        <div class="title">{{ user.name }}</div>
+        <div class="description">{{ user.description }}</div>
+    </div>
+</ng-container>

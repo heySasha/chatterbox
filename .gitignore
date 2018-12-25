@@ -1,0 +1,7 @@
+.idea/
+node_modules
+package-lock.json
+
+oldServer/node_modules
+oldServer/package-lock.json
+oldServer/dist

@@ -1,0 +1,22 @@
+<ng-container *ngIf="selectedUser">
+    <app-message-title [selectedUser]="selectedUser"></app-message-title>
+    <app-message-list
+        [messages]="messages"
+        [selectedUser]="selectedUser"
+        [currentUser]="currentUser"
+    >
+    </app-message-list>
+    <div class="typing">
+        <span *ngIf="isShow">{{ selectedUser.name }} is typing...</span>
+    </div>
+    <div class="control">
+        <input
+            [(ngModel)]="content"
+            (keypress)="onType()"
+            (keyup.enter)="onSend()"
+            type="text"
+            placeholder="Start chatting!"
+        />
+        <button (click)="onSend()">Send message</button>
+    </div>
+</ng-container>

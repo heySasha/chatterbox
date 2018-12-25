@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let user of (users | filter: searchText)">
+        <app-user-card [user]="user" (click)="selectUser.emit(user)">
+        </app-user-card>
+    </li>
+</ul>
+<input [(ngModel)]="searchText" type="text" placeholder="Search..." />

@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    color: #333;
+    font-size: 32px;
+    font-weight: 600;
+
+    button {
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        background-color: #ddd;
+        color: #333;
+
+        &:hover {
+            background-color: #576671;
+            color: #fff;
+        }
+    }
+}

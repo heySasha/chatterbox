@@ -1,0 +1,25 @@
+<form [formGroup]="registerForm" (submit)="onRegister()">
+    <div class="form-element">
+        <label for="name">Name:</label>
+        <input id="name" type="text" formControlName="name" />
+    </div>
+
+    <div class="form-element">
+        <label for="email">Email:</label>
+        <input id="email" type="text" formControlName="email" />
+    </div>
+
+    <div class="form-element">
+        <label for="password">Password:</label>
+        <input id="password" type="password" formControlName="password" />
+    </div>
+
+    <div class="form-element">
+        <label for="confirm">Confirm:</label>
+        <input id="confirm" type="password" formControlName="confirm" />
+    </div>
+
+    <div class="form-controls">
+        <button type="submit">Register</button> <a routerLink="/login">Login</a>
+    </div>
+</form>

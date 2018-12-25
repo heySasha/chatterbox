@@ -1,0 +1,16 @@
+<form [formGroup]="loginForm" (submit)="onLogin()">
+    <div class="form-element">
+        <label for="email">Email:</label>
+        <input id="email" type="text" formControlName="email" />
+    </div>
+
+    <div class="form-element">
+        <label for="password">Password:</label>
+        <input id="password" type="password" formControlName="password" />
+    </div>
+
+    <div class="form-controls">
+        <button type="submit">Login</button>
+        <a routerLink="/register">Register</a>
+    </div>
+</form>

@@ -1,0 +1,29 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    .tabs {
+        display: flex;
+        width: 262px;
+        height: 42px;
+
+        button {
+            width: 131px;
+            text-align: center;
+
+            border-style: solid;
+            border-width: 1px;
+            border-color: #dddddd;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+
+            &.active {
+                background-color: #fff;
+                border: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "chatterbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "npm i --prefix server && npm i --prefix client",
+    "start": "node run.js"
+  },
+  "engines": {
+    "node": "10.14.0",
+    "npm": "6.4.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "1.15.3",
+    "tslint": "~5.11.0"
+  }
+}

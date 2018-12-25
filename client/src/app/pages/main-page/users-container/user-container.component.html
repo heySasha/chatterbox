@@ -1,0 +1,25 @@
+<div class="tabs">
+    <button
+        [ngClass]="{ active: isOnlineTab }"
+        (click)="onSelectTab(true)">
+        Online
+    </button>
+    <button
+        [ngClass]="{ active: !isOnlineTab }"
+        (click)="onSelectTab(false)">
+        All
+    </button>
+</div>
+
+<app-user-list
+    *ngIf="isOnlineTab"
+    [users]="onlineUsers"
+    [selectedUser]="selectedUser"
+    (selectUser)="onSelectUser($event)">
+</app-user-list>
+<app-user-list
+    *ngIf="!isOnlineTab"
+    [users]="allUsers"
+    [selectedUser]="selectedUser"
+    (selectUser)="onSelectUser($event)">
+</app-user-list>

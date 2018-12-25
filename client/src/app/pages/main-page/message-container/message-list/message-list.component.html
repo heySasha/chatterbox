@@ -1,0 +1,25 @@
+<ul #list [scrollTop]="list.scrollHeight">
+    <li
+        *ngFor="let message of messages"
+        [ngClass]="{
+            other: message.from === selectedUser.email,
+            my: message.from !== selectedUser.email
+        }"
+    >
+        <div class="message">
+            <div class="title">
+                <div class="name">
+                    {{
+                    message.from === selectedUser.email
+                        ? selectedUser.name
+                        : currentUser.name
+                    }}
+                </div>
+                <div class="time">
+                    {{message.timestamp | date:'shortTime'}}
+                </div>
+            </div>
+            <div class="content">{{ message.content }}</div>
+        </div>
+    </li>
+</ul>
